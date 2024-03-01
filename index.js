@@ -9,6 +9,11 @@ const app = express();
 
 const basePath = path.resolve(__dirname, 'converted');
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+
+});
+
 app.get('/image/', async (req, res) => {
     const imageUrl = req.query.query;
     const regex = /cover\/([^/]+)$/
