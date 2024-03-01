@@ -1,14 +1,11 @@
 const express = require('express');
 const sharp = require('sharp');
 const fs = require('fs');
-const NodeCache = require('node-cache');
 const path = require('path');
 const {get} = require("https");
 
 
 const app = express();
-
-const imageCache = new NodeCache()
 
 const basePath = path.resolve(__dirname, 'converted');
 
